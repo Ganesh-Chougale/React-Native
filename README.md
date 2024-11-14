@@ -1,7 +1,12 @@
 "# React-Native" 
 
 Official Documents:  
-https://reactnative.dev/  
+https://reactnative.dev/ 
+
+```bash
+cd practicals
+npx react-native run-android
+```  
 
 
 ```bash
