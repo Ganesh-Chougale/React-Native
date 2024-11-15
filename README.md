@@ -4,7 +4,11 @@ Official Documents:
 https://reactnative.dev/ 
 
 ```bash
-cd practicals
+cd drvipin
+npx react-native run-android
+```  
+```bash
+cd histeshchaudhary
 npx react-native run-android
 ```  
 
