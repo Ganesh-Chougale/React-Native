@@ -1,0 +1,40 @@
+### Overall App Structure:
+1. **Setting Up React Native Project**
+2. **Permissions for Call Recording**
+3. **Recording Calls**
+4. **Storing Call Records**
+5. **Saving Data in Desired Format**
+6. **Silent Mechanism (No Alerts for Recording)**
+7. **UI for Viewing Records**
+
+### Breaking Down Each Part:
+
+#### 1. **Setting Up React Native Project**
+   - Initialize the React Native project using `npx react-native init CRA`.
+   - Set up necessary dependencies for Android/iOS (platform-specific).
+
+#### 2. **Permissions for Call Recording**
+   - **Android**: Request permissions to record calls and read phone state.
+     - Modify the `AndroidManifest.xml` to request permissions.
+   - **iOS**: Call recording is more restricted on iOS, and you'd need to check what’s allowed via Apple’s guidelines.
+
+#### 3. **Recording Calls**
+   - Use libraries such as `react-native-call-detection` for detecting call status (incoming, outgoing, ended).
+   - Use a call recorder API (e.g., `react-native-call-recording`) to record the audio during a call.
+
+#### 4. **Storing Call Records**
+   - Create a data structure to store the call records with information like:
+     - Caller name (or number)
+     - Date
+     - Time
+   - Save it in a local database like SQLite or AsyncStorage for persistence.
+
+#### 5. **Saving Data in Desired Format**
+   - Format the record as per the structure: `Caller name/Sim number + Date + Time`.
+   - Ensure the formatting is correct for every call recording.
+
+#### 6. **Silent Mechanism (No Alerts for Recording)**
+   - The goal here is to ensure the app records without showing notifications or alerts. You may need to ensure that the library you use doesn't trigger an alert for users, or you may have to manage it through system settings (which is a bit tricky and depends on OS version).
+
+#### 7. **UI for Viewing Records (optional)**
+   - You can build a simple UI to view saved call records, if you want to check them later.  
